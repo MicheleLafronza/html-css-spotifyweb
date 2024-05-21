@@ -10,6 +10,7 @@ body {
 }
 
 /* REGOLE SIDEBAR E MAIN */
+
 .top-container {
     display: flex;
     height: calc(100vh - 70px);
@@ -17,6 +18,7 @@ body {
 
 
 /* REGOLE SIDEBAR */
+
 .sidebar {
     width: 250px;
     background-color: black;
@@ -52,45 +54,124 @@ body {
     color: white;
 }
 
-.new-playlist {
+.sidebar .new-playlist {
     font-size: 1.1rem;
     margin-bottom: 20px;
 }
 
-.bot-side-section {
+.sidebar .playlist-sidebar {
+    overflow-y: auto;
+    min-height: 50px;
+}
+
+.sidebar .bot-side-section {
     margin-top: auto;
 }
 
-.bot-side-section hr {
+.sidebar .bot-side-section hr {
     margin: 10px 40px 10px 0;
 }
 
-.account-name {
+.sidebar .account-name {
     color: white;
 }
-
 
 /* /FINE REGOLE SIDEBAR */
 
 
 
-
+/* REGOLE MAIN CONTENT */
 
 .main-content {
     width: calc(100% - 250px);
     background-color: rgba(20,25,34,255);
     padding-top: 100px;
+    overflow-y: auto;
 }
 
+
+
+/* REGOLE MAIN CONTENT - CATEGORY */
+
+.category {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+}
+
+.category a {
+    color: rgba(101,101,101,255);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* /FINE REGOLE MAIN CONTENT - CATEGORY */
+
+/* REGOLE ALBUMS */
+
+.albums-container {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.albums-container h2 {
+    color: white;
+    margin-top: 20px;
+}
+
+.albums-container h5 {
+    color: rgba(101,101,101,255);
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.albums {
+    
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.albums .box {
+    width: calc((100% / 6) - 20px);
+    /* DEBUG */
+    /* height: 100px; */
+    /* background-color: red; */
+    /* border: solid 2px black; */
+}
+
+.box > .album-image img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.box > h4 {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.box > h5 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* /FINE REGOLE MAIN CONTENT */
+
+
+/* UPGRADE BAR */
 .upgrade-bar {
     width: calc(100% - 250px);
     height: 100px;
-    background-color: rgba(8,11,18,255);
+    background-color: rgba(8,11,18,0.2);
     position: fixed;
     top: 0;
     right: 0;
 }
-
+/* /UPGRADE BAR */
 
 
 /* REGOLE PLAYER BAR */
