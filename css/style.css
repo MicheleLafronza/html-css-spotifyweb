@@ -25,7 +25,7 @@ a {
 
 .top-container {
     display: flex;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 85px);
 }
 
 
@@ -179,11 +179,24 @@ a {
 /* UPGRADE BAR */
 .upgrade-bar {
     width: calc(100% - 250px);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
     height: 100px;
     background-color: rgba(8,11,18,0.2);
     position: fixed;
     top: 0;
     right: 0;
+}
+
+#upgrade-button {
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 20px;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 18px;
+    
 }
 /* /FINE UPGRADE BAR */
 
@@ -193,7 +206,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 85px;
     width: 100%;
     background-color: rgba(40,40,40,255);
     /* SENZA POSITION RELATIVE, Z-INDEX NON FUNZIONA */
@@ -204,6 +217,7 @@ a {
 /* REGOLE SONG INFO */
 
 .player-bar .song-info {
+    width: 20%;
     padding-left: 7px;
     display: flex;
     align-items: center;
@@ -228,23 +242,24 @@ a {
 }
 
 /* REGOLE PLAYER CONTROL */
-.player-control {
+.player-bar .player-control {
+    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.player-control .controls {
+.player-bar .player-control .controls {
     width: 100%;
     display: flex;
     justify-content: center;
     gap: 30px;
 }
 
-.player-control .controls button {
+.player-bar .player-control .controls button {
     background-color: rgba(40,40,40,255);
     border: none;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: white;
 } 
 
@@ -254,23 +269,31 @@ a {
 }
 
 /* REGOLE DURATION */
-.player-control .duration {
+.player-bar .player-control .duration {
     display: flex;
     justify-content: center;
-    margin-top: 5px;
+    margin-top: 10px;
     width: 100%;
 }
 
+#current-timer {
+    padding-right: 5px;
+}
 
+#end-timer {
+    padding-left: 5px;
+}
 
-
-
-
-
-
+.player-bar .player-control .duration input[type=range] {
+    width: 70%;
+}
 
 /* REGOLE VOLUME SHARE */
 
 .player-bar .volume-share {
+    width: 20%;
     padding-right: 7px;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 15px;
 }
