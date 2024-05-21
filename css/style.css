@@ -53,6 +53,10 @@ a {
     max-width: 100%
 }
 
+#small-logo {
+    display: none;
+}
+
 .sidebar .nav-sidebar .fa-solid {
     font-size: 1.3rem;
     margin-right: 5px;    
@@ -317,4 +321,84 @@ a {
     display: flex;
     flex-direction: row-reverse;
     gap: 15px;
+}
+
+.player-bar .volume-share input {
+    width: 30%;
+}
+
+
+/* MEDIA QUERY 890px*/
+@media screen and (max-width: 890px) {
+    .albums {
+        flex-wrap: wrap;
+    }
+
+    .albums .box {
+        width: calc((100% / 4) - 20px);
+    }
+
+    
+}
+
+/* MEDIA QUERY 768px */
+@media screen and (max-width: 768px) {
+    .albums .box {
+        width: calc((100% / 2) - 20px);
+    }
+
+    .category li {
+        padding: 0;
+    }
+}
+
+
+
+/* MEDIA QUERY 490px */
+@media screen and (max-width: 490px) {
+    .sidebar .new-playlist, h3 {
+        display: none;
+    }
+
+    .playlist-sidebar {
+        display: none;
+    }
+
+    #big-logo {
+        display: none;
+    }
+
+    .sidebar .logo {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    #small-logo {
+        display: inline-block;
+    }
+
+    #small-logo img {
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+    .mobile-no {
+        display: none;
+    }
+
+    .main-content {
+        width: calc(100% - 50px);
+    }
+    
+    .sidebar {
+        width: 50px;
+    }
+
+    .upgrade-bar {
+        width: calc(100% - 50px);
+    }
+    .account-name {
+        margin-top: 10px;
+    }
+
 }
