@@ -9,6 +9,18 @@ body {
     font-size: 14px;
 }
 
+a {
+    text-decoration: none;
+}
+
+.white-text {
+    color: white;
+}
+
+.grey-text {
+    color: rgba(101,101,101,255);
+}
+
 /* REGOLE SIDEBAR E MAIN */
 
 .top-container {
@@ -45,7 +57,6 @@ body {
 }
 
 .sidebar a {
-    text-decoration: none;
     color: rgba(101,101,101,255);
 }
 
@@ -104,7 +115,6 @@ body {
 
 .category a {
     color: rgba(101,101,101,255);
-    text-decoration: none;
     font-weight: bold;
 }
 
@@ -159,6 +169,10 @@ body {
     margin-top: 10px;
 }
 
+#border-radius-50 {
+    border-radius: 50%;
+}
+
 /* /FINE REGOLE MAIN CONTENT */
 
 
@@ -171,15 +185,92 @@ body {
     top: 0;
     right: 0;
 }
-/* /UPGRADE BAR */
+/* /FINE UPGRADE BAR */
 
 
 /* REGOLE PLAYER BAR */
 .player-bar {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 70px;
     width: 100%;
     background-color: rgba(40,40,40,255);
-    position: relative;
+    /* SENZA POSITION RELATIVE, Z-INDEX NON FUNZIONA */
+    position: relative; 
     z-index: 100;
+}
+
+/* REGOLE SONG INFO */
+
+.player-bar .song-info {
+    padding-left: 7px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.player-bar .song-info .song-image {
+    width: 11%;
+}
+
+.player-bar .song-info .song-image img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.player-bar .song-info .like-save {
+    padding-left: 50px;
+}
+
+.player-bar .song-info .like-save .fa-heart {
+    margin-right: 10px;
+}
+
+/* REGOLE PLAYER CONTROL */
+.player-control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.player-control .controls {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.player-control .controls button {
+    background-color: rgba(40,40,40,255);
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+} 
+
+#play {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* REGOLE DURATION */
+.player-control .duration {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+/* REGOLE VOLUME SHARE */
+
+.player-bar .volume-share {
+    padding-right: 7px;
 }
