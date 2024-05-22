@@ -26,14 +26,15 @@ a {
     color: rgba(101,101,101,255);
 }
 
-/* REGOLE SIDEBAR E MAIN */
+
+
+/* REGOLE TOP CONTAINER*/
 
 .top-container {
     display: flex;
     height: calc(100vh - 85px);
     min-width: 450px;
 }
-
 
 /* REGOLE SIDEBAR */
 
@@ -77,10 +78,6 @@ a {
     margin-bottom: 20px;
 }
 
-/* .sidebar a {
-    color: rgba(101,101,101,255);
-} */
-
 .sidebar h3 {
     margin-bottom: 20px;
     color: white;
@@ -121,6 +118,8 @@ a {
 
 
 
+
+
 /* REGOLE MAIN CONTENT */
 
 .main-content {
@@ -129,8 +128,6 @@ a {
     padding-top: 100px;
     overflow-y: auto;
 }
-
-
 
 /* REGOLE MAIN CONTENT - CATEGORY */
 
@@ -151,10 +148,10 @@ a {
 .category a:hover {
     color: white;
 }
-
-
-
 /* /FINE REGOLE MAIN CONTENT - CATEGORY */
+
+
+
 
 /* REGOLE ALBUMS */
 
@@ -213,7 +210,7 @@ a {
     cursor: pointer;
 }
 
-.album-image:hover .op {
+.box:hover .op {
     opacity: 1;
 }
 
@@ -242,11 +239,11 @@ a {
 .border-radius-50 {
     border-radius: 50%;
 }
+/* /FINE REGOLE ALBUMS */
 
-/* /FINE REGOLE MAIN CONTENT */
 
 
-/* UPGRADE BAR */
+/* REGOLE UPGRADE BAR */
 .upgrade-bar {
     width: calc(100% - 250px);
     display: flex;
@@ -274,6 +271,9 @@ a {
     transform: scale(1.1);
 }
 /* /FINE UPGRADE BAR */
+/* /FINE REGOLE MAIN CONTENT */
+
+
 
 
 /* REGOLE PLAYER BAR */
@@ -318,6 +318,9 @@ a {
 .player-bar .song-info .like-save .fa-heart {
     margin-right: 10px;
 }
+/* /FINE REGOLE SONG INFO */
+
+
 
 /* REGOLE PLAYER CONTROL */
 .player-bar .player-control {
@@ -368,6 +371,10 @@ a {
     width: 50%;
 
 }
+/* /FINE REGOLE PLAYER CONTROL CENTRALE */
+
+
+
 
 /* REGOLE VOLUME SHARE */
 
@@ -384,6 +391,11 @@ a {
 .player-bar .volume-share input {
     width: 30%;
 }
+/* FINE REGOLE VOLUME SHARE */
+
+
+
+
 
 
 /* INPUT RANGE RULES */
@@ -421,6 +433,12 @@ input[type=range]:hover::-moz-range-thumb {
 input[type="range"]:hover::-moz-range-progress {
     background: yellow;
 }
+/* /FINE REGOLE GENERALI INPUT RANGE */
+
+
+
+/* INIZIO REGOLE MEDIA QUERY */
+
 
 /* MEDIA QUERY 890px*/
 @media screen and (max-width: 890px) {
@@ -446,8 +464,6 @@ input[type="range"]:hover::-moz-range-progress {
     }
 }
 
-
-
 /* MEDIA QUERY 686px PER FAR SPARIRE IMMAGINE CANZONE*/
 @media screen and (max-width: 686px) {
     .song-image {
@@ -455,16 +471,6 @@ input[type="range"]:hover::-moz-range-progress {
     }
     
 }
-
-/* MEDIA QUERY ALTEZZA 454px*/
-@media screen and (max-height: 454px) {
-    .new-playlist, .playlist-sidebar, .bot-side-section {
-        display: none;
-    }
-    
-}
-
-
 
 
 /* MEDIA QUERY 490px */
@@ -541,13 +547,18 @@ input[type="range"]:hover::-moz-range-progress {
     }  
 }
 
+/* MEDIA QUERY ALTEZZA 454px*/
+@media screen and (max-height: 454px) {
+    .new-playlist, .playlist-sidebar, .bot-side-section {
+        display: none;
+    }
+    
+}
+/* /FINE REGOLE MEDIA QUERY */
 
 
 
-
-
-
- /* HOVER AND ACTIVE CLASSES */
+ /* INIZIO REGOLE HOVER AND ACTIVE CLASSES */
 .hover-line-under {
     position: relative;
   }
@@ -567,7 +578,6 @@ input[type="range"]:hover::-moz-range-progress {
 .hover-line-under:active::after {
     width: 45%;
   }
- 
   
 .hover-line-left {
     position: relative;
@@ -628,3 +638,4 @@ input[type="range"]:hover::-moz-range-progress {
 .scale-trans:hover {
     transform: scale(1.3);
 }
+/* /FINE REGOLE HOVER AND ACTIVE */
