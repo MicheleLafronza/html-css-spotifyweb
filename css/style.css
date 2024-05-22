@@ -31,6 +31,7 @@ a {
 .top-container {
     display: flex;
     height: calc(100vh - 85px);
+    min-width: 450px;
 }
 
 
@@ -282,6 +283,7 @@ a {
     align-items: center;
     height: 85px;
     width: 100%;
+    min-width: 450px;
     background-color: rgba(40,40,40,255);
     /* SENZA POSITION RELATIVE, Z-INDEX NON FUNZIONA */
     position: relative; 
@@ -310,7 +312,7 @@ a {
 }
 
 .player-bar .song-info .like-save {
-    padding-left: 50px;
+    padding-left: 10px;
 }
 
 .player-bar .song-info .like-save .fa-heart {
@@ -409,12 +411,21 @@ a {
 
 
 
-/* MEDIA QUERY 572px */
-/* @media screen and (max-width: 572px) {
-    .category div {
-        width: calc((100% / 2) - 20px);
+/* MEDIA QUERY 686px PER FAR SPARIRE IMMAGINE CANZONE*/
+@media screen and (max-width: 686px) {
+    .song-image {
+        display: none;
     }
-} */
+    
+}
+
+/* MEDIA QUERY ALTEZZA 454px*/
+@media screen and (max-height: 454px) {
+    .new-playlist, .playlist-sidebar, .bot-side-section {
+        display: none;
+    }
+    
+}
 
 
 
@@ -466,9 +477,9 @@ a {
         margin-top: 10px;
     }
 
-    .controls .fa-solid {
+    /* .controls .fa-solid {
         font-size: 0.8rem;
-    }
+    } */
 
     .player-bar .player-control .controls {
         gap: 8px;
@@ -477,6 +488,7 @@ a {
     #play {
         margin-left: 3px;
         margin-right: 3px;
+        /* font-size: 0.8rem; */
       }
 
     .player-bar .song-info .like-save {
@@ -491,6 +503,10 @@ a {
         font-size: 0.8rem;
     }  
 }
+
+
+
+
 
 
 
@@ -550,4 +566,28 @@ a {
 
 .white-act:active {
     color: white;
+}
+
+.sidebar .new-playlist .fa-plus {
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar .new-playlist:hover .fa-plus {
+    background-color: white;
+}
+
+.underline-trans {
+    transition: all 0.3s;
+}
+
+.underline-trans:hover {
+    text-decoration: underline;
+}
+
+.scale-trans {
+    transition: all 0.3s;
+}
+
+.scale-trans:hover {
+    transform: scale(1.3);
 }
