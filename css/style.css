@@ -9,6 +9,11 @@ body {
     font-size: 14px;
 }
 
+.wrapper {
+    width: 100%;
+    height: 100vh;
+}
+
 a {
     text-decoration: none;
 }
@@ -130,7 +135,6 @@ a {
 
 .category {
     display: flex;
-    list-style-type: none;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
@@ -241,7 +245,9 @@ a {
 /* REGOLE SONG INFO */
 
 .player-bar .song-info {
-    width: 20%;
+    flex-basis: calc(100% / 3);
+    flex-grow: 1;
+    flex-shrink: 2;
     padding-left: 7px;
     display: flex;
     align-items: center;
@@ -267,9 +273,10 @@ a {
 
 /* REGOLE PLAYER CONTROL */
 .player-bar .player-control {
-    width: 60%;
+    flex-basis: calc(100% / 3);
+    flex-grow: 2;
+    flex-shrink: 1;
     display: flex;
-    flex-grow: 1;
     flex-direction: column;
     align-items: center;
 }
@@ -316,7 +323,9 @@ a {
 /* REGOLE VOLUME SHARE */
 
 .player-bar .volume-share {
-    width: 20%;
+    flex-basis: calc(100% / 3);
+    flex-grow: 1;
+    flex-shrink: 2;
     padding-right: 7px;
     display: flex;
     flex-direction: row-reverse;
@@ -351,6 +360,16 @@ a {
         padding: 0;
     }
 }
+
+
+
+/* MEDIA QUERY 572px */
+@media screen and (max-width: 572px) {
+    .category div {
+        width: calc((100% / 2) - 20px);
+    }
+}
+
 
 
 
@@ -401,4 +420,31 @@ a {
         margin-top: 10px;
     }
 
+    .controls .fa-solid {
+        font-size: 0.8rem;
+    }
+
+    .player-bar .player-control .controls {
+        gap: 8px;
+    }
+
+    #play {
+        margin-left: 3px;
+        margin-right: 3px;
+      }
+
+    .player-bar .song-info .like-save {
+        padding-left: 0px;
+      }
+
+      .player-bar .volume-share {
+        gap: 7px;
+      }  
+
+    .player-bar .volume-share .fa-solid {
+        font-size: 0.8rem;
+    }  
 }
+
+
+/* HOVER */
